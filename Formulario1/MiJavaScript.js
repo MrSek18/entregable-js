@@ -35,6 +35,10 @@ function verificar(){
         alert("Edad Solo números");
         return;
     }
+    if(xedad<18){
+      alert("Debes ser mayor de edad");
+      return;
+    }
   
     if(xemail.length=='0'){
         alert("Ingresa email ");
@@ -71,6 +75,66 @@ function verificar(){
     document.fm1.method="GET";
     document.fm1.submit();
     }
+
+
+    // function obt_products(){
+    //   productos_checked = [];
+    //   let products = []; // Inicializa el array
+
+    //   for(let i = 0; i <= 5; i++) {
+    //     products[i] = document.fm2[`p${i + 1}`].checked; // Accede al valor del input utilizando la concatenación
+    //   }
+      
+    //   console.log(products); // Muestra el array de productos
+      
+
+    // }
+
+    // obt_products();
+
+    // p2 = document.getElementById("p6").textContent;
+    // console.log(p2)
+
+
+    // p1 = document.fm2.p6.value;
+
+    // console.log(p1)
+
+
+
+    function checkeds() {
+      let productosMarcados = []; // Inicializa el array para los productos marcados
+  
+      // Selecciona solo los checkboxes dentro del formulario fm2
+      const checkboxes = document.fm2.querySelectorAll('input[type="checkbox"]');
+  
+      // Recorre cada checkbox
+      checkboxes.forEach(checkbox => {
+          if (checkbox.checked) { // Verifica si el checkbox está marcado
+              productosMarcados.push(checkbox.name); // Agrega el valor al array
+          }
+      });
+      console.log(productosMarcados)
+
+
+      for(producto of productosMarcados){
+        
+       document.createElement("p");
+        document.getElementById("productList")
+        
+      }
+      // Muestra el array de productos marcados
+    }
+
+
+
+
+
+    document.getElementById('showProductsButton').addEventListener('click', function() {
+      var productList = document.getElementById('productList');
+      productList.classList.toggle('hidden'); // Alterna la clase 'hidden'
+    });
+
   
     function Recupera_Datos(){
      // Recuperar los datos enviados por POST

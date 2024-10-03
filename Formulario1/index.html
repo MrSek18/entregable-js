@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">    
+	<link rel="stylesheet" href="style.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="container p-5">
@@ -14,44 +17,46 @@
 			<div class="col-lg-4 ">            
 				<form name="fm1" role="form">
 					<fieldset>
-						<legend>Datos de envío</legend>
+						<legend class="fs-1 ">Datos</legend>
 						<div class="row mb-3">
-						  <label for="inputEmail3" class="col-sm-4 col-form-label">Nombres Completos</label>
-						  <div class="col-sm-8">
+						  <label for="inputEmail3" class="col-sm-3 col-form-label">Nombres Completos</label>
+						  <div class="col-sm-9">
 							<input type="text" name="txtnom" placeholder="Nombres y Apellidos"  class="form-control"   required/>
 						  </div>
 						</div>
 						<div class="row mb-3">
-							<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-							<div class="col-sm-10">
+							<label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+							<div class="col-sm-9">
 							  <input type="email" class="form-control" placeholder="cuentaemail@gmail.com" name="txtemail">
 							</div>
 						  </div>
 						<div class="row mb-3">
-						  <label for="inputPassword3" class="col-sm-2 col-form-label">DNI</label>
-						  <div class="col-sm-10">
+						  <label for="inputPassword3" class="col-sm-3 col-form-label">DNI</label>
+						  <div class="col-sm-9">
 							<input type="text" class="form-control" placeholder="ejemplo: 40478457" name="txtdni">
 						  </div>
 						</div>
 						<div class="row mb-3">
-							<label for="inputPassword3" class="col-sm-2 col-form-label">Edad</label>
-							<div class="col-sm-10">
+							<label for="inputPassword3" class="col-sm-3 col-form-label">Edad</label>
+							<div class="col-sm-9">
 							  <input type="number" class="form-control" placeholder="solo números" name="txtedad">
 							</div>
 						</div>
 						<div class="row mb-3">
-							<label for="inputPassword3" class="col-sm-2 col-form-label">Estudios</label>
-							<div class="col-sm-10">
-								<select class="form-select" name="estudios">
-									<option value="">6</option>
-									<option value="Primarios">Primarios</option>
-									<option value="Bachiller">Bachiller</option>
-									<option value="Grado">Grado</option>
-									<option value="Master">Master</option>
-								</select>
+							<label for="inputPassword3" class="col-sm-3 col-form-label">Número</label>
+							<div class="col-sm-9">
+							  <input type="number" class="form-control" placeholder="ejem: 981122557" name="txtedad">
 							</div>
 						</div>
-						<fieldset class="row mb-3">
+						<div class="row mb-3">
+							<label for="inputEmail3" class="col-sm-3 col-form-label">Dirección</label>
+							<div class="col-sm-9">
+							  <input type="text" name="txtnom" placeholder="ejem: 2590 N Washington St
+							  "  class="form-control"   required/>
+							</div>
+						  </div>
+						  
+						<!-- <fieldset class="row mb-3">
 						  <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
 						  <div class="col-sm-10">
 							<div class="form-check">
@@ -67,12 +72,12 @@
 							  </label>
 							</div>
 						  </div>
-						</fieldset>                  
+						</fieldset>                   -->
 						<div class="row mb-3">
 							<div class="col-sm-10 offset-sm-2">
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" name="txtcond" value="Si">
-									<label class="form-check-label" for="gridCheck1">
+									<label class="form-check-label" for="gridCheck1">	
 										Acepto los términos y condiciones
 									</label>
 								</div>
@@ -84,70 +89,82 @@
 				</form>
 			</div>
 			<div class="col-lg-8 border border-primary p-3">
-				<div class="row"> <!-- Añadido un contenedor de fila -->
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column"> <!-- Agregar clases para el espaciado y el diseño responsivo -->
-						<img src="products/1.jpg" class="img-fluid" alt="">
-						<div class="form-check mt-auto">
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-							  HP Laptop S/1550
-							</label>
+				<form name="fm2" role="form">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column"> <!-- Agregar clases para el espaciado y el diseño responsivo -->
+							<img src="products/1.jpg" class="img-fluid" alt="">
+							<div class="form-check mt-auto">
+								<input class="form-check-input" type="checkbox" name="HP Laptop" value="1550" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault" id="p1">HP Laptop S/1550</label>
+							</div>
+							  
 						</div>
-						  
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-						<img src="products/5.jpg" class="img-fluid" alt="">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-							  HP Laptop S/1550
-							</label>
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
+							<img src="products/4.jpg" class="img-fluid" alt="">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="REDMI 12" value="599" id="flexCheckDefault" >
+								<label class="form-check-label" for="flexCheckDefault" id="p2">REDMI 12 S/599</label>
+							</div>
+							
+						</div>
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column ">
+							<img src="products/3.jpg" class="img-fluid" alt="">
+							<div class="form-check mt-auto">
+								<input class="form-check-input" type="checkbox" name="ASUS Laptop" value="2550" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault" id="p3">ASUS Laptop S/2550</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
+							<img src="products/6.jpg" class="img-fluid" alt="">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="IPHONE 13" value="3699" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault" id="p4">IPHONE 13 S/3699</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column">
+							<img src="products/2.jpg" class="img-fluid" alt="">
+							<div class="form-check mt-auto"> <!-- Agrega mt-auto para empujar hacia abajo -->
+								<input class="form-check-input" type="checkbox" name="LENOVO laptop" value="2950" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault" id="p5">LENOVO laptop S/2950</label>
+							</div>
 						</div>
 						
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column ">
-						<img src="products/3.jpg" class="img-fluid" alt="">
-						<div class="form-check mt-auto">
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-							  HP Laptop S/1550
-							</label>
+						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
+							<img src="products/5.jpg" class="img-fluid" alt="">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="POCO F6 PRO" value="2049" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault" id="p6">POCO F6 pro S/2,049</label>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-						<img src="products/6.jpg" class="img-fluid" alt="">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-							  HP Laptop S/1550
-							</label>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column">
-						<img src="products/2.jpg" class="img-fluid" alt="">
-						<div class="form-check mt-auto"> <!-- Agrega mt-auto para empujar hacia abajo -->
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-								HP Laptop S/1550
-							</label>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-						<img src="products/5.jpg" class="img-fluid" alt="">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="1550" id="flexCheckDefault">
-							<label class="form-check-label" for="flexCheckDefault">
-							  HP Laptop S/1550
-							</label>
+				</div>
+				
+				</form>
+				<div>
+					<button type="button" class="btn btn-primary" onclick="checkeds()">añadir</button>
+					<div class="container mt-5">
+						<!-- Sección para el botón y la lista de productos -->
+						<div class="row mb-3" id="productSection">
+							<label for="inputPassword3" class="col-sm-3 col-form-label">Productos</label>
+							<div class="col-sm-9">
+								<button class="btn btn-secondary" id="showProductsButton">Mostrar Productos</button>
+								<div id="productList" class="hidden mt-3"> <!-- Lista oculta inicialmente -->
+									<p>Primarios</p>
+									<p>Bachiller</p>
+									<p>Grado</p>
+									<p>Master</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+
 			
 		</div>
 
       </div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 	<script src="MiJavaScript.js"></script>
 </body>
