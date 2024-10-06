@@ -1,3 +1,9 @@
 .hidden {
-    display: none; /* Oculta el elemento */
+    display: none; 
+}
+#productList {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    max-height: 200px; 
+    overflow-y: auto; 
 }

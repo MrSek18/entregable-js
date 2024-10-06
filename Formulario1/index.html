@@ -4,168 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tienda</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">    
 	<link rel="stylesheet" href="style.css">
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
-    <div class="container p-5">
-		<h1 class="text-center mb-4">TEC SENATI</h1>
-		<div class="row">
-			<div class="col-lg-4 ">            
-				<form name="fm1" role="form">
-					<fieldset>
-						<legend class="fs-1 ">Datos</legend>
-						<div class="row mb-3">
-						  <label for="inputEmail3" class="col-sm-3 col-form-label">Nombres Completos</label>
-						  <div class="col-sm-9">
-							<input type="text" name="txtnom" placeholder="Nombres y Apellidos"  class="form-control"   required/>
-						  </div>
-						</div>
-						<div class="row mb-3">
-							<label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
-							<div class="col-sm-9">
-							  <input type="email" class="form-control" placeholder="cuentaemail@gmail.com" name="txtemail">
-							</div>
-						  </div>
-						<div class="row mb-3">
-						  <label for="inputPassword3" class="col-sm-3 col-form-label">DNI</label>
-						  <div class="col-sm-9">
-							<input type="text" class="form-control" placeholder="ejemplo: 40478457" name="txtdni">
-						  </div>
-						</div>
-						<div class="row mb-3">
-							<label for="inputPassword3" class="col-sm-3 col-form-label">Edad</label>
-							<div class="col-sm-9">
-							  <input type="number" class="form-control" placeholder="solo números" name="txtedad">
-							</div>
-						</div>
-						<div class="row mb-3">
-							<label for="inputPassword3" class="col-sm-3 col-form-label">Número</label>
-							<div class="col-sm-9">
-							  <input type="number" class="form-control" placeholder="ejem: 981122557" name="txtedad">
-							</div>
-						</div>
-						<div class="row mb-3">
-							<label for="inputEmail3" class="col-sm-3 col-form-label">Dirección</label>
-							<div class="col-sm-9">
-							  <input type="text" name="txtnom" placeholder="ejem: 2590 N Washington St
-							  "  class="form-control"   required/>
-							</div>
-						  </div>
-						  
-						<!-- <fieldset class="row mb-3">
-						  <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
-						  <div class="col-sm-10">
-							<div class="form-check">
-							  <input class="form-check-input" type="radio" name="sexo" value="Masculino">
-							  <label class="form-check-label" for="gridRadios1">
-								Masculino
-							  </label>
-							</div>
-							<div class="form-check">
-							  <input class="form-check-input" type="radio" name="sexo" value="Femenino">
-							  <label class="form-check-label" for="gridRadios2">
-								Femenino
-							  </label>
-							</div>
-						  </div>
-						</fieldset>                   -->
-						<div class="row mb-3">
-							<div class="col-sm-10 offset-sm-2">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="txtcond" value="Si">
-									<label class="form-check-label" for="gridCheck1">	
-										Acepto los términos y condiciones
-									</label>
-								</div>
-							</div>
-						</div>
-						<button type="submit" class="btn btn-primary" onclick="verificar()">Registrar</button>
-						<button type="reset" class="btn btn-outline-primary">Cancelar</button>
-					</fieldset>
-				</form>
-			</div>
-			<div class="col-lg-8 border border-primary p-3">
-				<form name="fm2" role="form">
-					<div class="row">
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column"> <!-- Agregar clases para el espaciado y el diseño responsivo -->
-							<img src="products/1.jpg" class="img-fluid" alt="">
-							<div class="form-check mt-auto">
-								<input class="form-check-input" type="checkbox" name="HP Laptop" value="1550" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault" id="p1">HP Laptop S/1550</label>
-							</div>
-							  
-						</div>
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-							<img src="products/4.jpg" class="img-fluid" alt="">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="REDMI 12" value="599" id="flexCheckDefault" >
-								<label class="form-check-label" for="flexCheckDefault" id="p2">REDMI 12 S/599</label>
-							</div>
-							
-						</div>
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column ">
-							<img src="products/3.jpg" class="img-fluid" alt="">
-							<div class="form-check mt-auto">
-								<input class="form-check-input" type="checkbox" name="ASUS Laptop" value="2550" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault" id="p3">ASUS Laptop S/2550</label>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-							<img src="products/6.jpg" class="img-fluid" alt="">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="IPHONE 13" value="3699" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault" id="p4">IPHONE 13 S/3699</label>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary d-flex flex-column">
-							<img src="products/2.jpg" class="img-fluid" alt="">
-							<div class="form-check mt-auto"> <!-- Agrega mt-auto para empujar hacia abajo -->
-								<input class="form-check-input" type="checkbox" name="LENOVO laptop" value="2950" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault" id="p5">LENOVO laptop S/2950</label>
-							</div>
-						</div>
-						
-						<div class="col-lg-4 col-md-6 mb-4 border border-primary">
-							<img src="products/5.jpg" class="img-fluid" alt="">
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="POCO F6 PRO" value="2049" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault" id="p6">POCO F6 pro S/2,049</label>
-							</div>
-						</div>
-				</div>
-				
-				</form>
-				<div>
-					<button type="button" class="btn btn-primary" onclick="checkeds()">añadir</button>
-					<div class="container mt-5">
-						<!-- Sección para el botón y la lista de productos -->
-						<div class="row mb-3" id="productSection">
-							<label for="inputPassword3" class="col-sm-3 col-form-label">Productos</label>
-							<div class="col-sm-9">
-								<button class="btn btn-secondary" id="showProductsButton">Mostrar Productos</button>
-								<div id="productList" class="hidden mt-3"> <!-- Lista oculta inicialmente -->
-									<p>Primarios</p>
-									<p>Bachiller</p>
-									<p>Grado</p>
-									<p>Master</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="container">
 
-			
+    <div class="row p-5">
+        <div class="col-lg-4">            
+            <form name="fm1" role="form">
+                <fieldset>
+                    <legend>Datos de envío</legend>
+                    <div class="mb-3">
+                        <label for="txtnom" class="form-label">Nombres Completos</label>
+                        <input type="text" name="txtnom" placeholder="Nombres y Apellidos" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtemail" class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="cuentaemail@gmail.com" name="txtemail" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtdni" class="form-label">DNI</label>
+                        <input type="text" class="form-control" placeholder="ejemplo: 40478457" name="txtdni" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtedad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" placeholder="solo números" name="txtedad" required />
+                    </div>
+                    <div class="mb-3"></div>
+                        <label for="txtnumero" class="form-label">Numero</label>
+                        <input type="text" class="form-control" placeholder="ejemplo: +51 981122557" name="txtnumero" required />
+                    
+					<div class="mb-3">
+                        <label for="txtdirec" class="form-label">Direccion</label>
+                        <input type="text" name="txtdirec" placeholder="ejem: 2590 N Washington St" class="form-control" required />
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="txtcond" value="Si" id="acceptConditions" required />
+                        <label class="form-check-label" for="acceptConditions">Acepto los términos y condiciones</label>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" onclick="verificar()">Registrar</button>
+                        <button type="reset" class="btn btn-outline-primary">Cancelar</button>
+                    </div>
+                </fieldset>
+            </form>
 		</div>
+		<div class="col-lg-8">
+            <form name="fm2" role="form">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border d-flex flex-column">
+                            <img src="products/1.jpg" class="img-fluid" alt="HP Laptop">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="HP Laptop" value="1550" id="hpLaptop">
+                                <label class="form-check-label" for="hpLaptop">HP Laptop S/1550</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border  d-flex flex-column">
+                            <img src="products/4.jpg" class="img-fluid" alt="REDMI 12">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="REDMI 12" value="599" id="redmi12">
+                                <label class="form-check-label" for="redmi12">REDMI 12 S/599</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border  d-flex flex-column">
+                            <img src="products/3.jpg" class="img-fluid" alt="ASUS Laptop">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="ASUS Laptop" value="2550" id="asusLaptop">
+                                <label class="form-check-label" for="asusLaptop">ASUS Laptop S/2550</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border  d-flex flex-column">
+                            <img src="products/6.jpg" class="img-fluid" alt="IPHONE 13">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="IPHONE 13" value="3699" id="iphone13">
+                                <label class="form-check-label" for="iphone13">IPHONE 13 S/3699</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border  d-flex flex-column">
+                            <img src="products/2.jpg" class="img-fluid" alt="LENOVO Laptop">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="LENOVO Laptop" value="2950" id="lenovoLaptop">
+                                <label class="form-check-label" for="lenovoLaptop">LENOVO Laptop S/2950</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="border  d-flex flex-column">
+                            <img src="products/5.jpg" class="img-fluid" alt="POCO F6 PRO">
+                            <div class="form-check mt-auto">
+                                <input class="form-check-input" type="checkbox" name="POCO F6 PRO" value="2049" id="pocoF6">
+                                <label class="form-check-label" for="pocoF6">POCO F6 PRO S/2049</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="container mt-1">
+                <div class="row" id="productSection">
+                    <div class="col-sm-9">
+						<button type="button" class="btn btn-primary" onclick="checkeds()">Añadir</button>
+                        <button class="btn btn-secondary" id="showProductsButton">Mostrar Productos</button>
+                        <div id="productList" class="hidden mt-3">
+							<ul id="productListItems" class="list-group"></ul>
+						</div>
+						<div id="totalPrice" class="mt-2">Total: S/0.00</div> 
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    </div>
 
-      </div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+
+	
     <script src="js/bootstrap.bundle.min.js"></script>
 	<script src="MiJavaScript.js"></script>
 </body>
 </html>
+
+
